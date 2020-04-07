@@ -15,11 +15,10 @@
                 {{ end }}
                 <div class="column">
                   <p>{{ .Site.Params.Author }}</p>
-                  <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time> |
+                  <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time> | 
                     {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }}</p>
                 </div>
               </div>
-              
             </div>
             <div class="column">
               {{ range $idx, $category := .Params.categories }}
@@ -27,39 +26,39 @@
               {{- end }}
             </div>
           </div>
-        </div>
-        {{with .Params.images }}
-        <figure class="title-image">
-          <img src="{{ index .0 }}" alt="">
-        </figure>
-        {{ end }}
-        
-      </div>
-      <div class="content">
-        {{ .Content }}
-      </div>
-      <section class="section">
-        <div class="columns is-centered">
-          <div class="column max-800px">
-            <div class="columns is-mobile">
-              <div class="column has-text-left">
-                {{ with .PrevInSection }}
-                <p>Previous post</p>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
-              </div>
-              <div class="column has-text-right">
-                {{ with .NextInSection }}
-                <p>Next post</p>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
-              </div>
-            </div>
+          {{ with .Params.images }}
+          <figure class="title-image">
+            <img src="{{ index . 0 }}" alt="">
+          </figure>
+          {{ end }}
+          <div class="content">
+            {{ .Content }}
           </div>
         </div>
-      </section>
+      </div>
+  </article>
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column max-800px">
+        <div class="columns is-mobile">
+          <div class="column has-text-left">
+            {{ with .PrevInSection }}
+            <p>Previous post</p>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+          </div>
+          <div class="column has-text-right">
+            {{ with .NextInSection }}
+            <p>Next post</p>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-</article>
+  </section>
+
+
 </section>
 {{ end }}
+
