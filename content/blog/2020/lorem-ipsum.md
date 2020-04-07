@@ -3,10 +3,10 @@ title: "Lorem Ipsum"
 date: 2020-04-06T15:43:07-04:00
 description: "This is a short description of the page"
 images:
- - /images/blog/2020/03/photo_of_mountain_jpg
-categoreis:
-- testing cat
-- blogging
+ - /images/blog/2020/03/photo_of_mountain.jpg
+categories:
+ - testing cat
+ - blogging
 ---
 
 Lorem ipsum dolor sit amet, consectetur...
