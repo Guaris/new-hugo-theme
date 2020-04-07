@@ -1,0 +1,36 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Cool_Angel_Theme_Demo"
+theme = "bloggeri"
+[params]
+   description = "My site Description"
+   author = "Angel"
+   authorImage = "/images/angel.png"
+   
+
+[[menu.main]]
+   name = "About"
+   url = "/about"
+
+[[menu.main]]
+   name = "Blog"
+   url = "/blog"
+
+[[menu.social]]
+   name = "GitHub"
+   url = "https://www.github.com/guaris"
+   pre = "<i class='fab fa-github'></i>"
+[[menu.social]]
+   name = "Twitter"
+   url = "https://twitter.com/writek8s"
+   pre = "<i class='fab fa-twitter'></i>"
+
+
+[[menu.footer]]
+   name = "About"
+   url = "/about"
+[[menu.footer]]
+   name = "Privacy"
+   url = "/privacy"
+
+   
